@@ -5,6 +5,6 @@
 ### Space Game
 OOP Game built in the Processing environment. Made in 2020
 
-Image of running Space Game
+![Image of Space Game](https://github.com/JanaAmer/ProgrammingPortfolio1B/blob/gh-pages/images/SpaceGame.png?raw=true)
 
 Source Code:
