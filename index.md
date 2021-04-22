@@ -26,3 +26,10 @@ OOP Input Output files built in the Processing environment. Made in 2020
 
 Source Code available [here](https://github.com/JanaAmer/ProgrammingPortfolio1B/tree/gh-pages/src/inputOutput). Run on Repl.it (Java)
 
+
+### Number Guessing Game
+OOP Number Guessing Game built in the Processing environment. Made in 2020
+
+![Image of running code](https://github.com/JanaAmer/ProgrammingPortfolio1B/blob/gh-pages/images/numberGuess.png?raw=true)
+
+Source Code available [here](https://github.com/JanaAmer/ProgrammingPortfolio1B/tree/gh-pages/src/numberGuessing). Run on Repl.it (Java)
