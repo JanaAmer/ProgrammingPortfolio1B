@@ -1,6 +1,7 @@
 # Jana Amer's Programming Portfolio 2021
 Jana Amer [Email](mailto:janaamer9686@granitesd.org)
-+semester 1 Certification
+
+**Semester 1 Certification**
  
 ## Processing Projects
 
