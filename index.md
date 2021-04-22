@@ -33,3 +33,10 @@ OOP Number Guessing Game built in the Processing environment. Made in 2020
 ![Image of running code](https://github.com/JanaAmer/ProgrammingPortfolio1B/blob/gh-pages/images/numberGuess.png?raw=true)
 
 Source Code available [here](https://github.com/JanaAmer/ProgrammingPortfolio1B/tree/gh-pages/src/numberGuessing). Run on Repl.it (Java)
+
+### Shape Tester
+OOP that find the surface area and volume of shapes, built in the Processing environment. Made in 2020
+
+![Image of running code](https://github.com/JanaAmer/ProgrammingPortfolio1B/blob/gh-pages/images/shapeTester.png?raw=true)
+
+Source Code available [here](https://github.com/JanaAmer/ProgrammingPortfolio1B/tree/gh-pages/src/shapeTester). Run on Repl.it (Java)
