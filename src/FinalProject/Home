@@ -1,1 +1,6 @@
+Class Home{
+int rooms, objs
 
+void Display(){}
+
+}
