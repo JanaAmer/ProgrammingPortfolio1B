@@ -1,1 +1,7 @@
+Class Game{
+int
 
+void setup(){}
+
+void Display(){}
+}
