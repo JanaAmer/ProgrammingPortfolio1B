@@ -1,0 +1,5 @@
+Class Castle{
+int rooms
+
+void Display(){}
+}
