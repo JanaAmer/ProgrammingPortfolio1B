@@ -1,0 +1,5 @@
+Class Npc{
+int
+
+void Display(){}
+}
