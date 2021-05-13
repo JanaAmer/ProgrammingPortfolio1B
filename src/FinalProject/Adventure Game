@@ -1,7 +1,36 @@
-Class Game{
-int
+import java.util.Scanner;
+ 
+public class Main {
+     
+    Scanner myScanner = new Scanner(System.in);
+    Scanner enterScanner = new Scanner(System.in);
+    int playerHP;
+    String playerWeapon;
+    int choice;
+    int witchHP;
+     
+    int silverRing;
+         
+    public static void main(String[] args) {
+ 
+        Main story;
+        story = new Main();    
+         
+        story.playerSetUp();   
+        story.castleGate();
+    }
+     
+    public void playerSetUp(){
+         
+         
+       playerHP = 10;
+       witchHP = 15;
+ 
+        playerWeapon = "Sword";
 
-void setup(){}
-
-void Display(){}
-}
+        System.out.println("You have been traveling for days on end, in the distance you see a castle. Your goal is to get inside the castle gate, Have Fun!");
+        System.out.println("Instructions will be given as you play through the story.\nPress 1 to start.");
+        System.out.println("Your HP: "+ playerHP);
+        System.out.println("Your Weapon: "+ playerWeapon);
+        myScanner.nextInt();
+    }   
