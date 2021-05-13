@@ -1,0 +1,55 @@
+        public void fight(){
+        System.out.println("\n--------------------------------------------------------------\n");
+        System.out.println("Your HP: "+ playerHP);
+        System.out.println("Witch HP: " + witchHP);
+        System.out.println("\n1: Attack");
+        System.out.println("2: Run");
+        System.out.println("\n--------------------------------------------------------------\n");
+         
+        choice = myScanner.nextInt();
+         
+        if(choice==1){
+            attack();
+        }
+        else if(choice==2){
+            crossRoad();
+        }
+        else{
+            fight();
+        }
+    }
+    
+    public void attack(){
+        int playerDamage = 2;
+         
+        if(playerWeapon.equals("Knife")){
+            playerDamage = new java.util.Random().nextInt(5); 
+        }
+        else if(playerWeapon.equals("Long Sword")){
+            playerDamage = new java.util.Random().nextInt(8); 
+        }
+         
+        System.out.println("You attacked the monster and gave " + playerDamage + " damage!");
+         
+       witchHP = witchHP - playerDamage;
+         
+        System.out.println("Monster HP: " + witchHP);
+         
+        if (witchHP<1){ win(); } else if (witchHP>0){
+            int witchDamage =0;
+             
+            witchDamage = new java.util.Random().nextInt(4);
+             
+            System.out.println("The monster attacked you and gave " + witchDamage + " damage!");
+             
+            playerHP = playerHP - witchDamage;
+             
+            System.out.println("Player HP: " + playerHP);
+             
+            if(playerHP<1){ dead(); } else if(playerHP>0){
+                fight();
+            }
+        }
+         
+         
+    }
