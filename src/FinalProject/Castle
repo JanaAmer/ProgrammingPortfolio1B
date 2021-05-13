@@ -1,5 +1,40 @@
-Class Castle{
-int rooms
-
-void Display(){}
-}
+public void castleGate(){
+         
+        System.out.println("\n--------------------------------------------------------------\n");
+        System.out.println("You are at the gate of the castle.");
+        System.out.println("A guard is standing in front of you.");
+        System.out.println("");
+        System.out.println("What do you want to do?");
+        System.out.println("");
+        System.out.println("1: Talk to the guard");
+        System.out.println("2: Attack the guard");
+        System.out.println("3: Leave");
+        System.out.println("\n--------------------------------------------------------------\n");
+ 
+        choice = myScanner.nextInt();
+         
+        if(choice==1){
+            if(silverRing==1){
+                ending();
+            }
+            else{
+                System.out.println("Guard: Hello there, stranger. \nSorry but we cannot let stranger enter our castle.\n--------------------------------------------------------------\n");
+                enterScanner.nextLine();
+                castleGate();
+            }
+             
+        }
+        else if(choice==2){
+            playerHP = playerHP-1;
+            System.out.println("Guard: Hey don't be stupid.\n\nThe guard is far stronger than you, give up.\n(You receive 1 damage)\n");
+            System.out.println("Your HP: " + playerHP);
+            enterScanner.nextLine();
+            castleGate();
+        }
+        else if(choice==3){
+            crossRoad();
+        }   
+        else{
+            castleGate();
+        }
+    }
