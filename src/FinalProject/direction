@@ -1,0 +1,72 @@
+public void north(){
+        System.out.println("\n--------------------------------------------------------------\n");
+        System.out.println("You find some berry bushes and a river. You rest at the riverside.");
+        System.out.println("Your HP is recovered.");
+        playerHP = playerHP + 1;
+        System.out.println("Your HP: " + playerHP);
+        System.out.println("\n\n1: Go back to the crossroad\n2: Stay are rest another day.");
+        System.out.println("\n--------------------------------------------------------------\n");
+         
+        choice = myScanner.nextInt();
+         
+        if(choice==1){
+            crossRoad();
+        }
+        else{
+            north();
+        }
+    }
+     
+    public void east(){
+        System.out.println("\n--------------------------------------------------------------\n");
+        System.out.println("You walked into a forest and found a Cross Bow!");
+        playerWeapon = "Cross Bow";
+        System.out.println("Your Weapon: "+ playerWeapon);
+        System.out.println("\n\n1: Go back to the crossroad\n2: Go deeper into forest");
+        System.out.println("\n--------------------------------------------------------------\n");
+         
+        choice = myScanner.nextInt();
+         
+        if(choice==1){
+            crossRoad();
+        }
+        else if (choice==2){
+            forest();
+        }
+    }
+
+    public void west(){
+        System.out.println("\n--------------------------------------------------------------\n");
+        System.out.println("You see your home, if you stay you will fail your mission but continue your cozy, comfy life at home.");
+        System.out.println("\n\n1: Go back to the crossroad\n2: Stay");
+        System.out.println("\n--------------------------------------------------------------\n");
+         
+        choice = myScanner.nextInt();
+         
+        if(choice==1){
+            crossRoad();
+        }
+        else if (choice==2){
+            dead();
+        }
+    }
+     
+    public void witch(){
+        System.out.println("\n--------------------------------------------------------------\n");
+        System.out.println("You encounter a witch!\n");
+        System.out.println("1: Fight");
+        System.out.println("2: Run");
+        System.out.println("\n--------------------------------------------------------------\n");
+         
+        choice = myScanner.nextInt();
+         
+        if(choice==1){
+            fight();
+        }
+        else if(choice==2){
+            crossRoad();
+        }
+        else{
+            west();
+        }
+    }
