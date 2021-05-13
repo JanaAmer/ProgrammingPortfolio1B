@@ -1,4 +1,20 @@
-Class WitchHut{
-
-void display{}
-}
+    public void witch(){
+        System.out.println("\n--------------------------------------------------------------\n");
+        System.out.println("You encounter a witch!\n");
+        System.out.println("1: Fight");
+        System.out.println("2: Run");
+        System.out.println("\n--------------------------------------------------------------\n");
+         
+        choice = myScanner.nextInt();
+         
+        if(choice==1){
+            fight();
+        }
+        else if(choice==2){
+            crossRoad();
+        }
+        else{
+            west();
+        }
+    }
+   
