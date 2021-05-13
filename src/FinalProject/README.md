@@ -4,9 +4,9 @@
 
 ### In this game you will use text based inputs to navigate through an adventure game
 ### The promts and descriptions will also be text based with small graphic illustrations
-![Class Diagram]()
+![Class Diagram](https://github.com/JanaAmer/ProgrammingPortfolio1B/blob/gh-pages/images/classes.jpg?raw=true)
 
-![New example Image](https://github.com/JanaAmer/ProgrammingPortfolio1B/blob/gh-pages/images/Final.png?raw=true)
+![Example Image](https://github.com/JanaAmer/ProgrammingPortfolio1B/blob/gh-pages/images/Final.png?raw=true)
 
 Code for the game can be found ![Here](https://github.com/JanaAmer/ProgrammingPortfolio1B/tree/gh-pages/src/FinalProject)
 
