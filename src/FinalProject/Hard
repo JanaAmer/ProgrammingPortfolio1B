@@ -1,0 +1,34 @@
+
+public class Hard extends Main {
+
+	public Hard(int playerHP, int witchHP, String playerWeapon) {
+		super(playerHP, witchHP, playerWeapon);
+	}
+
+	public void attack() {
+		int playerDamage = new java.util.Random().nextInt(3);
+		System.out.println("You attacked the witch and gave " + playerDamage + " damage!");
+
+		changeWitchHP(-playerDamage);
+
+		System.out.println("Witch HP: " + witchHP);
+
+		if (witchHP < 1) {
+			win();
+		} else if (witchHP > 0) {
+			int witchDamage = new java.util.Random().nextInt(4);
+
+			System.out.println("The witch attacked you and gave " + witchDamage + " damage!");
+
+			changePlayerHP(-witchDamage);
+
+			System.out.println("Player HP: " + playerHP);
+
+			if (playerHP < 1) {
+				dead();
+			} else if (playerHP > 0) {
+				fight();
+			}
+		}
+	}
+}
