@@ -6,7 +6,7 @@
 ### The promts and descriptions will also be text based with small ascii graphic illustrations
 ![Class Diagram](https://github.com/JanaAmer/ProgrammingPortfolio1B/blob/gh-pages/images/classes.jpg?raw=true)
 
-![Example Image](https://github.com/JanaAmer/ProgrammingPortfolio1B/blob/gh-pages/images/Final.png?raw=true)
+![Example Image](https://github.com/JanaAmer/ProgrammingPortfolio1B/blob/gh-pages/images/Finale.png?raw=true)
 
 Code for the game can be found ![Here](https://github.com/JanaAmer/ProgrammingPortfolio1B/tree/gh-pages/src/FinalProject)
 
