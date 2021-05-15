@@ -1,36 +1,307 @@
 import java.util.Scanner;
- 
-public class Main {
-     
-    Scanner myScanner = new Scanner(System.in);
-    Scanner enterScanner = new Scanner(System.in);
-    int playerHP;
-    String playerWeapon;
-    int choice;
-    int witchHP;
-     
-    int silverRing;
-         
-    public static void main(String[] args) {
- 
-        Main story;
-        story = new Main();    
-         
-        story.playerSetUp();   
-        story.castleGate();
-    }
-     
-    public void playerSetUp(){
-         
-         
-       playerHP = 10;
-       witchHP = 15;
- 
-        playerWeapon = "Sword";
 
-        System.out.println("You have been traveling for days on end, in the distance you see a castle. Your goal is to get inside the castle gate, Have Fun!");
-        System.out.println("Instructions will be given as you play through the story.\nPress 1 to start.");
-        System.out.println("Your HP: "+ playerHP);
-        System.out.println("Your Weapon: "+ playerWeapon);
-        myScanner.nextInt();
-    }   
+public class Main {
+	static Scanner myScanner = new Scanner(System.in);
+	Scanner enterScanner = new Scanner(System.in);
+	static int choice;
+	int silverRing;
+
+	static boolean easyIsChosen = false;
+	static boolean mediumIsChosen = false;
+	static boolean hardIsChosen = false;
+
+	static Easy easyLevel;
+	static Medium mediumLevel;
+	static Hard hardLevel;
+
+	public int playerHP;
+	public int witchHP;
+	public String playerWeapon;
+
+	public Main(int playerHP, int witchHP, String playerWeapon) {
+		this.playerHP = playerHP;
+		this.witchHP = witchHP;
+		this.playerWeapon = playerWeapon;
+	}
+
+	public void changePlayerHP(int change) {
+		playerHP += change;
+	}
+
+	public void changeWitchHP(int change) {
+		witchHP += change;
+	}
+
+	public static void main(String[] args) {
+
+		Main story = new Main(100, 100, "");
+
+		System.out.println(
+				"You've been wandering for days on end, you see a castle in the distance! Your goal is to find a silver ring and return it to the castle, Goodluck traveler!");
+		System.out.println("\n--------------------------------------------------------------\n");
+		System.out.println("Choose your difficulty\n 1 is Easy\n 2 is Medium\n 3 is Hard");
+
+		choice = myScanner.nextInt();
+		if (choice == 1) {
+			easyLevel = new Easy(15, 10, "Knife");
+			easyIsChosen = true;
+			story = easyLevel;
+
+		} else if (choice == 2) {
+			mediumLevel = new Medium(15, 15, "Fork");
+			mediumIsChosen = true;
+			story = mediumLevel;
+
+		} else {
+			hardLevel = new Hard(10, 20, "Spoon");
+			hardIsChosen = true;
+			story = hardLevel;
+		}
+		story.castleGate();
+
+	}
+
+	public void castleGate() {
+		System.out.println("\n--------------------------------------------------------------\n");
+		System.out.println("You are at the gate of the castle.");
+		System.out.println("A guard is standing in front of you.");
+		System.out.println("");
+		System.out.println("What do you want to do?");
+		System.out.println("");
+		System.out.println("1: Talk to the guard");
+		System.out.println("2: Attack the guard");
+		System.out.println("3: Leave");
+		System.out.println("\n--------------------------------------------------------------\n");
+
+		choice = myScanner.nextInt();
+
+		if (choice == 1) {
+			if (silverRing == 1) {
+				ending();
+			} else {
+				System.out.println(
+						"Guard: Hello there, stranger. \nSorry but we cannot let stranger enter our castle.\n--------------------------------------------------------------\n");
+				enterScanner.nextLine();
+				castleGate();
+			}
+
+		} else if (choice == 2) {
+			playerHP = playerHP - 1;
+			System.out.println(
+					"Guard: Hey don't be stupid.\n\nThe guard is far stronger than you, give up.\n(You receive 1 damage)\n");
+			System.out.println("Your HP: " + playerHP);
+			enterScanner.nextLine();
+			castleGate();
+		} else if (choice == 3) {
+			crossRoad();
+		} else {
+			castleGate();
+		}
+	}
+
+	public void crossRoad() {
+		System.out.println("\n--------------------------------------------------------------\n");
+		System.out.println("You are at a crossroad. If you go south, you will go back to the town.\n\n");
+		System.out.println("1: Go north");
+		System.out.println("2: Go east");
+		System.out.println("3: Go south");
+		System.out.println("4: Go west");
+		System.out.println("\n--------------------------------------------------------------\n");
+
+		choice = myScanner.nextInt();
+
+		if (choice == 1) {
+			north();
+		} else if (choice == 2) {
+			east();
+		} else if (choice == 3) {
+			castleGate();
+		} else if (choice == 4) {
+			west();
+		} else {
+			crossRoad();
+		}
+	}
+
+	public void north() {
+		System.out.println("\n--------------------------------------------------------------\n");
+		System.out.println("You find some berry bushes and a river. You rest at the riverside.");
+		System.out.println("Your HP is recovered.");
+		playerHP = playerHP + 1;
+		System.out.println("Your HP: " + playerHP);
+		System.out.println("\n\n1: Go back to the crossroad\n2: Stay are rest another day.");
+		System.out.println("\n--------------------------------------------------------------\n");
+
+		choice = myScanner.nextInt();
+
+		if (choice == 1) {
+			crossRoad();
+		} else {
+			north();
+		}
+	}
+
+	public void east() {
+		System.out.println("\n--------------------------------------------------------------\n");
+		System.out.println("You walked into a forest and found a utensil!");
+		System.out.println("Your Weapon: " + playerWeapon);
+		System.out.println("\n\n1: Go back to the crossroad\n2: Go deeper into forest");
+		System.out.println("\n--------------------------------------------------------------\n");
+
+		choice = myScanner.nextInt();
+
+		if (choice == 1) {
+			crossRoad();
+		} else if (choice == 2) {
+			forest();
+		}
+	}
+
+	public void forest() {
+		System.out.println("\n--------------------------------------------------------------\n");
+		System.out.println("You walk deeper into the forest.");
+		System.out.println("in the distance you see a hut of some sort");
+		System.out.println("");
+		System.out.println("What do you want to do?");
+		System.out.println("");
+		System.out.println("1: Investigate the hut");
+		System.out.println("2: Leave");
+		System.out.println("\n--------------------------------------------------------------\n");
+
+		choice = myScanner.nextInt();
+
+		if (choice == 1) {
+			witch();
+
+		} else if (choice == 2) {
+			crossRoad();
+		}
+	}
+
+	public void west() {
+		System.out.println("\n--------------------------------------------------------------\n");
+		System.out.println(
+				"You see your home, if you stay you will fail your mission but continue your cozy, comfy life at home.");
+		System.out.println("\n\n1: Go back to the crossroad\n2: Stay");
+		System.out.println("\n--------------------------------------------------------------\n");
+
+		choice = myScanner.nextInt();
+
+		if (choice == 1) {
+			crossRoad();
+		} else if (choice == 2) {
+			dead();
+		}
+	}
+
+	public void witch() {
+		System.out.println("\n--------------------------------------------------------------\n");
+		System.out.println("You encounter a witch!\n");
+		System.out.println("1: Fight");
+		System.out.println("2: Run");
+		System.out.println("\n--------------------------------------------------------------\n");
+
+		choice = myScanner.nextInt();
+
+		if (choice == 1) {
+			fight();
+		} else if (choice == 2) {
+			crossRoad();
+		} else {
+			west();
+		}
+	}
+
+	public void attack() {
+		int playerDamage = 2;
+
+		System.out.println("You attacked the witch and gave " + playerDamage + " damage!");
+
+		changeWitchHP(-playerDamage);
+
+		System.out.println("Witch HP: " + witchHP);
+
+		if (witchHP < 1) {
+			win();
+		} else if (witchHP > 0) {
+			int witchDamage = 0;
+			witchDamage = new java.util.Random().nextInt(4);
+
+			System.out.println("The witch attacked you and gave " + witchDamage + " damage!");
+
+			changePlayerHP(-witchDamage);
+
+			System.out.println("Player HP: " + playerHP);
+
+			if (playerHP < 1) {
+				dead();
+			} else if (playerHP > 0) {
+				fight();
+			}
+		}
+	}
+
+	public void fight() {
+		System.out.println("\n--------------------------------------------------------------\n");
+		System.out.println("Your HP: " + playerHP);
+		System.out.println("Witch HP: " + witchHP);
+		System.out.println("\n1: Attack");
+		System.out.println("2: Run");
+		System.out.println("\n--------------------------------------------------------------\n");
+
+		choice = myScanner.nextInt();
+
+		if (choice == 1) {
+
+			if (easyIsChosen == true) {
+				easyLevel.attack();
+			} else if (mediumIsChosen == true) {
+				mediumLevel.attack();
+			} else {
+				hardLevel.attack();
+			}
+
+		} else {
+			crossRoad();
+		}
+
+	}
+
+	public void dead() {
+		System.out.println("\n--------------------------------------------------------------\n");
+		System.out.println("You have lost!!!");
+		System.out.println("\n\nGAME OVER");
+		System.out.println("\nThanks for playing!");
+		System.out.println("\n--------------------------------------------------------------\n");
+
+	}
+
+	public void win() {
+		System.out.println("\n--------------------------------------------------------------\n");
+		System.out.println("You killed the witch!");
+		System.out.println("The witch dropped a ring!");
+		System.out.println("You obtaind a silver ring!\n\n Bring it back to the castle to be granted entry");
+		System.out.println("1: Go back to crossroad");
+		System.out.println("\n--------------------------------------------------------------\n");
+
+		silverRing = 1;
+
+		choice = myScanner.nextInt();
+		if (choice == 1) {
+			crossRoad();
+		} else {
+			win();
+		}
+
+	}
+
+	public void ending() {
+		System.out.println("\n--------------------------------------------------------------\n");
+		System.out.println("Guard: Oh you killed that witch?");
+		System.out.println("Guard: She had been terrorizing us for decades thank you hero! Welcome to our castle!");
+		System.out.println("\n\n           THE END                    ");
+		System.out.println("\n--------------------------------------------------------------\n");
+		System.out.println("Thank you for playing!");
+		System.out.println("\n--------------------------------------------------------------\n");
+	}
+}
