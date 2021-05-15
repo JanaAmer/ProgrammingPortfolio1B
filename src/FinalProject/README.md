@@ -3,7 +3,7 @@
 
 
 ### In this game you will use text based inputs to navigate through an adventure game
-### The promts and descriptions will also be text based with small graphic illustrations
+### The promts and descriptions will also be text based with small ascii graphic illustrations
 ![Class Diagram](https://github.com/JanaAmer/ProgrammingPortfolio1B/blob/gh-pages/images/classes.jpg?raw=true)
 
 ![Example Image](https://github.com/JanaAmer/ProgrammingPortfolio1B/blob/gh-pages/images/Final.png?raw=true)
