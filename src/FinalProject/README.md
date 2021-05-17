@@ -8,7 +8,5 @@
 
 ![Example Image](https://github.com/JanaAmer/ProgrammingPortfolio1B/blob/gh-pages/images/Finale.png?raw=true)
 
-Code for the game can be found ![Here](https://github.com/JanaAmer/ProgrammingPortfolio1B/tree/gh-pages/src/FinalProject)
-
-Zip file is ![Here](https://github.com/JanaAmer/ProgrammingPortfolio1B/blob/gh-pages/src/FinalProject/FinalProject.zip)
+Code for the game can be found ![Here](https://github.com/JanaAmer/ProgrammingPortfolio1B/tree/gh-pages/src/FinalProject) Zip file is ![Here](https://github.com/JanaAmer/ProgrammingPortfolio1B/blob/gh-pages/src/FinalProject/FinalProject.zip)
 
