@@ -39,6 +39,8 @@ public class Main {
 		System.out.println(
 				"You've been wandering for days on end, you see a castle in the distance! Your goal is to find a silver ring and return it to the castle, Goodluck traveler!");
 		System.out.println("\n--------------------------------------------------------------\n");
+		System.out.println("You will be using numbers 1-3 to navigate through this game, if you get stuck hit any key to return to your previous position");
+    		System.out.println("\n--------------------------------------------------------------\n");
 		System.out.println("Choose your difficulty\n 1 is Easy\n 2 is Medium\n 3 is Hard");
 
 		choice = myScanner.nextInt();
