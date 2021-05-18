@@ -5,9 +5,9 @@ Jana Amer [Email](mailto:janaamer9686@granitesd.org)
  
 ## Final Project Adventure Game
 ## Choose your own adventure game
-## By Jana Amer
-
-## The promts and descriptions are text based with small ascii graphic illustrations
+ By Jana Amer
+ 
+ The promts and descriptions are text based with small ascii graphic illustrations
 ![Class Diagram](https://github.com/JanaAmer/ProgrammingPortfolio1B/blob/gh-pages/images/finalClass.jpg?raw=true)
 
 ![Example Image](https://github.com/JanaAmer/ProgrammingPortfolio1B/blob/gh-pages/images/Finale.png?raw=true)
