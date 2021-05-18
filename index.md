@@ -7,8 +7,7 @@ Jana Amer [Email](mailto:janaamer9686@granitesd.org)
 ### Choose your own adventure game
 ### By Jana Amer
 
-### In this game you will use text based inputs to navigate through an adventure game
-### The promts and descriptions will also be text based with small ascii graphic illustrations
+### The promts and descriptions are text based with small ascii graphic illustrations
 ![Class Diagram](https://github.com/JanaAmer/ProgrammingPortfolio1B/blob/gh-pages/images/finalClass.jpg?raw=true)
 
 ![Example Image](https://github.com/JanaAmer/ProgrammingPortfolio1B/blob/gh-pages/images/Finale.png?raw=true)
